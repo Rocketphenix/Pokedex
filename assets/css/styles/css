@@ -1,0 +1,141 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-size: 1.2em;
+  background: url("../img/body_bg2.png");
+  background-size: Cover;
+}
+body header {
+  background: url("../img/FondPokeballSansRond.png") no-repeat center;
+  background-size: cover;
+  padding: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+body header a {
+  font-size: 1.25em;
+  color: gold;
+  text-decoration: none;
+}
+body header nav a {
+  margin-right: 100px;
+}
+body header nav a:last-child {
+  margin-right: 0;
+}
+body main h1 {
+  font-size: 2.2em;
+  text-align: center;
+  color: white;
+}
+body main section {
+  padding: 25px;
+  width: 75%;
+  margin: 50px auto;
+  text-align: center;
+}
+body main section h2 {
+  font-size: 2em;
+  color: blue;
+  text-decoration: none;
+}
+body main .sectionIntro {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+body main .sectionIntro img {
+  width: 75px;
+  height: auto;
+}
+.pokemon-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.type {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Couleurs des types Pokémon */
+.feu {
+  background-color: #f08030;
+}
+
+.eau {
+  background-color: #6890f0;
+}
+
+.plante {
+  background-color: #78c850;
+}
+
+.électrique {
+  background-color: #f8d030;
+  color: black;
+}
+
+.glace {
+  background-color: #98d8d8;
+  color: black;
+}
+
+.combat {
+  background-color: #c03028;
+}
+
+.poison {
+  background-color: #a040a0;
+}
+
+.sol {
+  background-color: #e0c068;
+  color: black;
+}
+
+.vol {
+  background-color: #a890f0;
+}
+
+.psy {
+  background-color: #f85888;
+}
+
+.insecte {
+  background-color: #a8b820;
+}
+
+.roche {
+  background-color: #b8a038;
+}
+
+.spectre {
+  background-color: #705898;
+}
+
+.dragon {
+  background-color: #7038f8;
+}
+
+.ténèbres {
+  background-color: #705848;
+}
+
+.acier {
+  background-color: #b8b8d0;
+  color: black;
+}
+
+.fée {
+  background-color: #ee99ac;
+}
+
+/*# sourceMappingURL=css.map */

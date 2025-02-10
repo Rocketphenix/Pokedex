@@ -1,0 +1,110 @@
+/* Forme générale de la page */
+body {
+	margin: 0;
+	font-size: 100%;
+	background: url("Img/body_bg2.png");
+	background-size: Cover;
+}
+h1 {
+	font-size: 2vw;
+}
+h2 {
+	font-size: 1.7vw;
+}
+
+/* header */
+header {
+	background: url("../img/FondPokeball.png") no-repeat center;
+
+	background-size: cover;
+	padding: 20px;
+	border-bottom: 0.5vw solid black;
+	display: flex;
+	justify-content: space-around;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+}
+nav a,
+header a {
+	float: left;
+	margin-right: 130px;
+	overflow: hidden;
+	font-size: 2vw;
+	text-decoration: none;
+	color: gold;
+}
+nav a:first-child {
+	margin-left: 75px;
+}
+
+/*Text Content*/
+.lienContent {
+	font-size: 2vw;
+	text-decoration: none;
+	color: blue;
+}
+.TextContent {
+	margin: 30px auto;
+	color: yellow;
+	width: 740px;
+}
+/*Image Content*/
+.ImageHautGauche {
+	max-width: 5vw;
+	min-width: 5vw;
+	float: left;
+	margin-top: -11px;
+}
+.ImageHautDroite {
+	max-width: 5vw;
+	min-width: 5vw;
+	float: right;
+	margin-right: 20px;
+	margin-top: -11px;
+}
+
+/*Pokédex*/
+.Pokedex {
+	background: rgba(120, 120, 120, 0.8);
+	padding: 30px 0px 30px 20px;
+	font-size: 100%;
+	height: 1300px;
+	width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/*Carte*/
+.Carte {
+	background: rgba(46, 120, 213, 0.8);
+	padding: 30px 0px 30px 20px;
+	font-size: 100%;
+	height: 1300px;
+	width: 1280px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+/*Objet*/
+.Objet {
+	background: rgba(130, 80, 12, 0.8);
+	padding: 30px 0px 30px 20px;
+	font-size: 100%;
+	height: 1300px;
+	width: 1280px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+/*Attaque*/
+.Attaque {
+	background: rgba(218, 0, 79, 0.8);
+	padding: 30px 0px 30px 20px;
+	font-size: 100%;
+	height: 1300px;
+	width: 1280px;
+	margin: 50px auto;
+	text-align: center;
+}

@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+
+	body {
+		margin: 0;
+		font-size: 1.2em;
+		background: url("../img/body_bg2.png");
+		background-size: Cover;
+
+		header {
+			background: url("../img/FondPokeballSansRond.png") no-repeat center;
+			background-size: cover;
+			padding: 25px;
+			margin-bottom: 25px;
+
+			display: flex;
+			justify-content: space-around;
+
+			a {
+				font-size: 1.25em;
+				color: gold;
+				text-decoration: none;
+			}
+			nav {
+				a {
+					margin-right: 100px;
+				}
+				a:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		main {
+			h1 {
+				font-size: 2.2em;
+				text-align: center;
+				color: white;
+			}
+
+			section {
+				padding: 25px;
+				width: 75%;
+				margin: 50px auto;
+				text-align: center;
+
+				h2 {
+					font-size: 2em;
+					color: blue;
+					text-decoration: none;
+				}
+			}
+
+			.sectionIntro {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 15px;
+
+				img {
+					width: 75px;
+					height: auto;
+				}
+			}
+		}
+	}
+}

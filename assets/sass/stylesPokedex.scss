@@ -1,0 +1,96 @@
+#pokedex {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+
+	.card {
+		background-color: rgb(170, 170, 170);
+		width: 23%;
+		padding: 20px;
+		text-align: center;
+
+		img {
+			height: 150px;
+			max-width: 100%;
+			object-fit: contain;
+		}
+
+		.zoneType {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+
+			.type {
+				padding: 10px 20px;
+				border-radius: 20px;
+				font-weight: bold;
+				color: white;
+				text-transform: capitalize;
+
+				/* Couleurs des types Pokémon */
+				&-Feu {
+					background-color: #f08030;
+				}
+				&-Eau {
+					background-color: #6890f0;
+				}
+				&-Plante {
+					background-color: #78c850;
+				}
+				&-Electrik {
+					background-color: #f8d030;
+					color: black;
+				}
+				&-Glace {
+					background-color: #98d8d8;
+					color: black;
+				}
+				&-Combat {
+					background-color: #c03028;
+				}
+				&-Poison {
+					background-color: #a040a0;
+				}
+				&-Sol {
+					background-color: #e0c068;
+					color: black;
+				}
+				&-Vol {
+					background-color: #a890f0;
+				}
+				&-Psy {
+					background-color: #f85888;
+				}
+				&-Insecte {
+					background-color: #a8b820;
+				}
+				&-Roche {
+					background-color: #b8a038;
+				}
+				&-Spectre {
+					background-color: #705898;
+				}
+				&-Dragon {
+					background-color: #7038f8;
+				}
+				&-Ténèbres {
+					background-color: #705848;
+				}
+				&-Acier {
+					background-color: #b8b8d0;
+					color: black;
+				}
+				&-Fée {
+					background-color: #ee99ac;
+				}
+				&-Normal {
+					background-color: #a8a878; /* Couleur du type Normal */
+					color: white;
+				}
+			}
+		}
+	}
+}
