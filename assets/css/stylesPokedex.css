@@ -9,14 +9,9 @@
 }
 #pokedex .card {
   background-color: rgb(170, 170, 170);
-  width: 23%;
+  width: 19.5%;
   padding: 20px;
   text-align: center;
-}
-#pokedex .card img {
-  height: 150px;
-  max-width: 100%;
-  object-fit: contain;
 }
 #pokedex .card .zoneType {
   display: flex;
@@ -40,7 +35,7 @@
 #pokedex .card .zoneType .type-Plante {
   background-color: #78c850;
 }
-#pokedex .card .zoneType .type-Electrik {
+#pokedex .card .zoneType .type-Électrique {
   background-color: #f8d030;
   color: black;
 }

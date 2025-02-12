@@ -8,15 +8,9 @@
 
 	.card {
 		background-color: rgb(170, 170, 170);
-		width: 23%;
+		width: 19.5%;
 		padding: 20px;
 		text-align: center;
-
-		img {
-			height: 150px;
-			max-width: 100%;
-			object-fit: contain;
-		}
 
 		.zoneType {
 			display: flex;
@@ -40,7 +34,7 @@
 				&-Plante {
 					background-color: #78c850;
 				}
-				&-Electrik {
+				&-Électrique {
 					background-color: #f8d030;
 					color: black;
 				}
