@@ -3,6 +3,9 @@
 	<head>
 		<title>Pokédex</title>
 		<meta charset="UTF-8" />
+		<script
+			src="https://kit.fontawesome.com/73d98e1f18.js"
+			crossorigin="anonymous"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="assets/img/pokeball.png" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
@@ -22,7 +25,47 @@
 
 		<main>
 			<h1>Pokédex</h1>
+			<div id="filters">
+				<select id="filterType">
+					<option value="all">Tous les types</option>
+				</select>
+				<select id="filterGeneration">
+					<option value="all">Toutes les générations</option>
+					<option value="1">Génération 1</option>
+					<option value="2">Génération 2</option>
+					<option value="3">Génération 3</option>
+					<option value="4">Génération 4</option>
+					<option value="5">Génération 5</option>
+					<option value="6">Génération 6</option>
+					<option value="7">Génération 7</option>
+					<option value="8">Génération 8</option>
+					<option value="9">Génération 9</option>
+				</select>
+			</div>
+			<input
+				type="text"
+				id="searchBar"
+				placeholder="Rechercher un Pokémon..." />
+
+			<div class="pageChanger">
+				<div id="leftArrowTop">
+					<i class="fa-solid fa-caret-left fa-2xl"></i>
+				</div>
+				<div id="paginationTop" class="pagination"></div>
+				<div id="rightArrowTop">
+					<i class="fa-solid fa-caret-right fa-2xl"></i>
+				</div>
+			</div>
 			<div id="pokedex"></div>
+			<div class="pageChanger">
+				<div id="leftArrowBottom">
+					<i class="fa-solid fa-caret-left fa-2xl"></i>
+				</div>
+				<div id="paginationBottom" class="pagination"></div>
+				<div id="rightArrowBottom">
+					<i class="fa-solid fa-caret-right fa-2xl"></i>
+				</div>
+			</div>
 		</main>
 		<script src="pokedex.js"></script>
 	</body>

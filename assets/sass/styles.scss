@@ -8,9 +8,14 @@
 		background-size: Cover;
 
 		header {
-			background: url("../img/FondPokeballSansRond.png") no-repeat center;
+			background: rgb(251, 0, 0);
+			background: linear-gradient(
+				180deg,
+				rgba(251, 0, 0, 1) 50%,
+				rgba(255, 255, 255, 1) 60%
+			);
 			background-size: cover;
-			padding: 25px;
+			padding: 25px 0;
 			margin-bottom: 25px;
 
 			display: flex;
@@ -22,6 +27,12 @@
 				text-decoration: none;
 			}
 			nav {
+				width: 100%;
+				padding: 10px;
+				display: flex;
+				justify-content: center;
+				background: black;
+
 				a {
 					margin-right: 100px;
 				}
