@@ -1,0 +1,46 @@
+@charset "UTF-8";
+main .grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr repeat(18, 1fr);
+  grid-template-rows: 2fr repeat(18, 50px);
+  border: 1px solid black;
+  border-left-width: 0;
+  border-top-width: 0;
+  padding: 0;
+}
+main .grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid black;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  color: white;
+}
+main .grid div.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligne tout à droite */
+  background: rgb(215, 167, 58);
+  background: linear-gradient(213deg, rgb(215, 167, 58) 48%, rgb(0, 0, 0) 50%, rgb(209, 212, 218) 52%);
+  color: black;
+}
+main .grid div.separator p:last-child {
+  align-self: flex-start; /* Aligne uniquement le dernier élément à gauche */
+}
+main .grid div.resist {
+  background: rgb(57, 173, 57);
+}
+main .grid div.effective {
+  background: rgb(175, 42, 42);
+}
+main .grid div.immune {
+  background: black;
+}
+main .grid div:not([class]) {
+  background: rgb(170, 170, 170);
+}
+
+/*# sourceMappingURL=stylesTypesTable.css.map */

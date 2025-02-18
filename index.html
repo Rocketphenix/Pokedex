@@ -17,15 +17,15 @@
 			<!-- <a href="Accueil.html" class="active">Accueil</a> -->
 			<nav>
 				<a href="#">Pokédex</a>
-				<a href="#">Carte</a>
+				<a href="typesTable.html">Table des Types</a>
 				<a href="#">Objet</a>
 				<a href="#">Attaque</a>
 			</nav>
 		</header>
 
 		<main>
-			<h1>Pokédex</h1>
-			<div id="filters">
+			<button id="btnFilter">Filtre</button>
+			<div id="filters" class="hidden">
 				<select id="filterType">
 					<option value="all">Tous les types</option>
 				</select>
@@ -41,11 +41,12 @@
 					<option value="8">Génération 8</option>
 					<option value="9">Génération 9</option>
 				</select>
+				<input
+					type="text"
+					id="searchBar"
+					placeholder="Rechercher un Pokémon..." />
 			</div>
-			<input
-				type="text"
-				id="searchBar"
-				placeholder="Rechercher un Pokémon..." />
+			<h1>Pokédex</h1>
 
 			<div class="pageChanger">
 				<div id="leftArrowTop">

@@ -6,9 +6,11 @@ let rightArrowBottom = document.getElementById("rightArrowBottom");
 let paginationTop = document.getElementById("paginationTop");
 let paginationBottom = document.getElementById("paginationBottom");
 
-const filterType = document.getElementById("filterType");
-const filterGeneration = document.getElementById("filterGeneration");
-const searchBar = document.getElementById("searchBar");
+let btnFilter = document.getElementById("btnFilter");
+let filters = document.getElementById("filters");
+let filterType = document.getElementById("filterType");
+let filterGeneration = document.getElementById("filterGeneration");
+let searchBar = document.getElementById("searchBar");
 
 const typeTrad = {
 	normal: "Normal",
@@ -32,11 +34,12 @@ const typeTrad = {
 };
 
 let allPokemon = []; // Liste complète des Pokémon
+let allPokemonNamesFr = {}; // Stocke les noms FR des Pokémon
 let allPokemonTypes = {}; // Stocke les types des Pokémon
-let currentIndex = 0; // Index actuel pour l'affichage (index du premier pokémon afficher)
-let currentPage = 0; // Index actuel pour l'affichage (index du premier pokémon afficher)
-const limit = 50; // Nombre de Pokémon affichés par page
-let filteredPokemon = []; // Pokémon après filtrage
+let currentIndex = 0;
+let currentPage = 0;
+const limit = 50;
+let filteredPokemon = [];
 
 // Vérifier si les données sont déjà stockées
 if (
@@ -54,10 +57,9 @@ if (
 	fetch("https://pokeapi.co/api/v2/pokemon?limit=1025")
 		.then((response) => response.json())
 		.then((data) => {
-			allPokemon = data.results; // Stocke la liste des Pokémon
-			localStorage.setItem("allPokemon", JSON.stringify(allPokemon)); // Sauvegarde
+			allPokemon = data.results;
+			localStorage.setItem("allPokemon", JSON.stringify(allPokemon));
 
-			// Récupérer les types
 			const typeList = Object.keys(typeTrad);
 			let requests = typeList.map((type) =>
 				fetch(`https://pokeapi.co/api/v2/type/${type}`)
@@ -85,7 +87,6 @@ if (
 function afficherPokemon() {
 	pokedex.innerHTML = "";
 
-	// Récupérer les valeurs des filtres
 	let selectedType = filterType.value;
 	let selectedGen = filterGeneration.value;
 	let searchQuery = searchBar.value.toLowerCase();
@@ -113,19 +114,20 @@ function afficherPokemon() {
 				pokemonId >= genRanges[selectedGen][0] &&
 				pokemonId <= genRanges[selectedGen][1]);
 
-		// Vérifier si le nom correspond
-		let matchName = pokemon.name.toLowerCase().includes(searchQuery);
+		// 🔍 Vérifier si le nom correspond en FR ou EN
+		let nomFr = allPokemonNamesFr[pokemon.name] || "";
+		let matchName =
+			pokemon.name.toLowerCase().includes(searchQuery) ||
+			nomFr.toLowerCase().includes(searchQuery);
 
 		return matchType && matchGen && matchName;
 	});
 
-	// Vérifier que l'index actuel ne dépasse pas la liste filtrée
 	if (currentIndex >= filteredPokemon.length) {
 		currentIndex = Math.max(0, filteredPokemon.length - limit);
 		currentPage = Math.floor(currentIndex / limit);
 	}
 
-	// Affichage paginé
 	let pokemonToShow = filteredPokemon.slice(currentIndex, currentIndex + limit);
 
 	pokemonToShow.forEach((pokemon) => {
@@ -147,6 +149,8 @@ function afficherPokemon() {
 				const frenchName = data.names.find(
 					(name) => name.language.name === "fr"
 				);
+				allPokemonNamesFr[pokemon.name] = frenchName.name; // Stocke le nom FR
+
 				let nomPokemon = document.createElement("p");
 				nomPokemon.innerText = frenchName.name + " / " + pokemon.name;
 
@@ -155,15 +159,13 @@ function afficherPokemon() {
 
 				let type1 = document.createElement("span");
 				type1.innerText = types[0];
-				type1.classList.add(`type`);
-				type1.classList.add(`type-${types[0]}`);
+				type1.classList.add(`type`, types[0]);
 				zoneType.appendChild(type1);
 
 				if (types[1]) {
 					let type2 = document.createElement("span");
 					type2.innerText = types[1];
-					type2.classList.add(`type`);
-					type2.classList.add(`type-${types[1]}`);
+					type2.classList.add(`type`, types[1]);
 					zoneType.appendChild(type2);
 				}
 
@@ -238,6 +240,10 @@ function jumpPage(index) {
 /* ************************************************************************** */
 /* 																	Filtre																		*/
 /* ************************************************************************** */
+btnFilter.addEventListener("click", () => {
+	filters.classList.toggle("hidden");
+});
+
 filterType.addEventListener("change", () => {
 	currentIndex = 0;
 	currentPage = 0;

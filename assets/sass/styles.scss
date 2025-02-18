@@ -21,11 +21,6 @@
 			display: flex;
 			justify-content: space-around;
 
-			a {
-				font-size: 1.25em;
-				color: gold;
-				text-decoration: none;
-			}
 			nav {
 				width: 100%;
 				padding: 10px;
@@ -34,10 +29,15 @@
 				background: black;
 
 				a {
-					margin-right: 100px;
+					font-size: 1.25em;
+					color: gold;
+					text-decoration: none;
+					border-right: 1px solid gold;
+					padding: 0 50px;
 				}
 				a:last-child {
 					margin-right: 0;
+					border-right: none;
 				}
 			}
 		}
@@ -73,5 +73,66 @@
 				}
 			}
 		}
+	}
+
+	/* Couleurs des types Pokémon */
+	.Feu {
+		background-color: #f08030;
+	}
+	.Eau {
+		background-color: #6890f0;
+	}
+	.Plante {
+		background-color: #78c850;
+	}
+	.Électrique {
+		background-color: #f8d030;
+		color: black;
+	}
+	.Glace {
+		background-color: #98d8d8;
+		color: black;
+	}
+	.Combat {
+		background-color: #c03028;
+	}
+	.Poison {
+		background-color: #a040a0;
+	}
+	.Sol {
+		background-color: #e0c068;
+		color: black;
+	}
+	.Vol {
+		background-color: #a890f0;
+	}
+	.Psy {
+		background-color: #f85888;
+	}
+	.Insecte {
+		background-color: #a8b820;
+	}
+	.Roche {
+		background-color: #b8a038;
+	}
+	.Spectre {
+		background-color: #705898;
+	}
+	.Dragon {
+		background-color: #7038f8;
+	}
+	.Ténèbres {
+		background-color: #705848;
+	}
+	.Acier {
+		background-color: #b8b8d0;
+		color: black;
+	}
+	.Fée {
+		background-color: #ee99ac;
+	}
+	.Normal {
+		background-color: #a8a878;
+		color: white;
 	}
 }

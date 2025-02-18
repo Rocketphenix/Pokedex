@@ -1,0 +1,55 @@
+main {
+	.grid {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 2fr repeat(18, 1fr);
+		grid-template-rows: 2fr repeat(18, 50px);
+		border: 1px solid black;
+		border-left-width: 0;
+		border-top-width: 0;
+		padding: 0;
+
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 10px;
+			border: 1px solid black;
+			border-right-width: 0;
+			border-bottom-width: 0;
+			color: white;
+
+			&.separator {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end; /* Aligne tout à droite */
+				background: rgb(215, 167, 58);
+				background: linear-gradient(
+					213deg,
+					rgba(215, 167, 58, 1) 48%,
+					rgba(0, 0, 0, 1) 50%,
+					rgba(209, 212, 218, 1) 52%
+				);
+				color: black;
+
+				p:last-child {
+					align-self: flex-start; /* Aligne uniquement le dernier élément à gauche */
+				}
+			}
+
+			&.resist {
+				background: rgb(57, 173, 57);
+			}
+			&.effective {
+				background: rgb(175, 42, 42);
+			}
+			&.immune {
+				background: black;
+			}
+
+			&:not([class]) {
+				background: rgb(170, 170, 170);
+			}
+		}
+	}
+}

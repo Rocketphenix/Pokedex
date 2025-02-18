@@ -3,6 +3,30 @@ main {
 	padding: 20px;
 	width: 85%;
 	margin: 50px auto;
+	position: relative;
+
+	#btnFilter {
+		position: absolute;
+		padding: 5px 10px;
+		top: 0;
+		left: 0;
+		translate: 0 -100%;
+		border: none;
+		background-color: #d00000;
+		color: white;
+	}
+	#filters {
+		width: 100%;
+		padding: 5px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #0179cf;
+
+		&.hidden {
+			display: none;
+		}
+	}
 
 	#pokedex {
 		width: 100%;
@@ -17,6 +41,10 @@ main {
 			width: 19%;
 			padding: 20px;
 			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			place-items: center;
 			text-transform: capitalize;
 
 			img {
@@ -35,67 +63,6 @@ main {
 					border-radius: 20px;
 					font-weight: bold;
 					color: white;
-
-					/* Couleurs des types Pokémon */
-					&-Feu {
-						background-color: #f08030;
-					}
-					&-Eau {
-						background-color: #6890f0;
-					}
-					&-Plante {
-						background-color: #78c850;
-					}
-					&-Électrique {
-						background-color: #f8d030;
-						color: black;
-					}
-					&-Glace {
-						background-color: #98d8d8;
-						color: black;
-					}
-					&-Combat {
-						background-color: #c03028;
-					}
-					&-Poison {
-						background-color: #a040a0;
-					}
-					&-Sol {
-						background-color: #e0c068;
-						color: black;
-					}
-					&-Vol {
-						background-color: #a890f0;
-					}
-					&-Psy {
-						background-color: #f85888;
-					}
-					&-Insecte {
-						background-color: #a8b820;
-					}
-					&-Roche {
-						background-color: #b8a038;
-					}
-					&-Spectre {
-						background-color: #705898;
-					}
-					&-Dragon {
-						background-color: #7038f8;
-					}
-					&-Ténèbres {
-						background-color: #705848;
-					}
-					&-Acier {
-						background-color: #b8b8d0;
-						color: black;
-					}
-					&-Fée {
-						background-color: #ee99ac;
-					}
-					&-Normal {
-						background-color: #a8a878;
-						color: white;
-					}
 				}
 			}
 		}
